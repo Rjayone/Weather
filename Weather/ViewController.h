@@ -8,8 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
+@class OWMWeatherAPI;
+
 @interface ViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UILabel *information;
+@property (weak, nonatomic) IBOutlet UITextField *latitude;
+@property (weak, nonatomic) IBOutlet UITextField *longitude;
+@property (weak, nonatomic) IBOutlet UIButton *search;
 
+@property (strong, nonatomic) OWMWeatherAPI* weatherAPI;
+
+- (IBAction)actionSeatch:(UIButton *)sender;
 @end
 
