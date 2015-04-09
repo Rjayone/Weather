@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		844091191AD7095B00CE9836 /* WeatherCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 844091181AD7095B00CE9836 /* WeatherCell.m */; };
 		8481B6D01AD658B600A082AF /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8481B6CF1AD658B600A082AF /* DetailViewController.m */; };
 		84D4EEFC1AD3170200CA9B2F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D4EEFB1AD3170200CA9B2F /* main.m */; };
 		84D4EEFF1AD3170200CA9B2F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D4EEFE1AD3170200CA9B2F /* AppDelegate.m */; };
@@ -18,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		844091171AD7095B00CE9836 /* WeatherCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherCell.h; sourceTree = "<group>"; };
+		844091181AD7095B00CE9836 /* WeatherCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherCell.m; sourceTree = "<group>"; };
 		8481B6CE1AD658B600A082AF /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		8481B6CF1AD658B600A082AF /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		84D4EEF61AD3170200CA9B2F /* Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weather.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,6 +53,8 @@
 			children = (
 				8481B6CE1AD658B600A082AF /* DetailViewController.h */,
 				8481B6CF1AD658B600A082AF /* DetailViewController.m */,
+				844091171AD7095B00CE9836 /* WeatherCell.h */,
+				844091181AD7095B00CE9836 /* WeatherCell.m */,
 			);
 			name = DetailView;
 			sourceTree = "<group>";
@@ -78,7 +83,6 @@
 				84D4EF001AD3170200CA9B2F /* ViewController.h */,
 				84D4EF011AD3170200CA9B2F /* ViewController.m */,
 				84D4EF031AD3170200CA9B2F /* Main.storyboard */,
-				84D4EF081AD3170200CA9B2F /* LaunchScreen.xib */,
 				84D4EEF91AD3170200CA9B2F /* Supporting Files */,
 			);
 			path = Weather;
@@ -87,6 +91,7 @@
 		84D4EEF91AD3170200CA9B2F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				84D4EF081AD3170200CA9B2F /* LaunchScreen.xib */,
 				84D4EF061AD3170200CA9B2F /* Images.xcassets */,
 				84D4EEFD1AD3170200CA9B2F /* AppDelegate.h */,
 				84D4EEFE1AD3170200CA9B2F /* AppDelegate.m */,
@@ -180,6 +185,7 @@
 				84D4EF021AD3170200CA9B2F /* ViewController.m in Sources */,
 				84D4EEFF1AD3170200CA9B2F /* AppDelegate.m in Sources */,
 				84D4EEFC1AD3170200CA9B2F /* main.m in Sources */,
+				844091191AD7095B00CE9836 /* WeatherCell.m in Sources */,
 				84D4EF221AD3173400CA9B2F /* OWMWeatherAPI.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

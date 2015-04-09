@@ -31,7 +31,7 @@ static NSString* kAPIKey = @"47e5228bf1f19cca540208c888986822";
     [self fadeView:_search toValue:1 withDuration:0.5 andDelay:1.5];
     
     _weatherAPI = [[OWMWeatherAPI alloc] initWithAPIKey:kAPIKey];
-    [_weatherAPI setTemperatureFormat:kOWMTempCelcius];
+    [_weatherAPI setTemperatureFormat:kOWMTempKelvin];
 }
 
 //-----------------------------------------------------------------------------
