@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "OWMWeatherAPI.h"
+#import "DetailViewController.h"
 
 //OpenWeatherMap API Key
 static NSString* kAPIKey = @"47e5228bf1f19cca540208c888986822";
@@ -60,16 +61,23 @@ static NSString* kAPIKey = @"47e5228bf1f19cca540208c888986822";
 
 - (IBAction)actionSeatch:(UIButton *)sender
 {
+    NSLog(@"Begin download");
     CLLocationCoordinate2D coord = CLLocationCoordinate2DMake(_latitude.text.floatValue, _longitude.text.floatValue);
-    [_weatherAPI dailyForecastWeatherByCoordinate:coord withCount:5 andCallback:^(NSError *error, NSDictionary *result) {
+    [_weatherAPI dailyForecastWeatherByCoordinate:coord withCount:1 andCallback:^(NSError *error, NSDictionary *result) {
         if(error)
         {
             NSLog(@"Something wrong!");
             return;
         }
-        
-        NSString* country = result[@"city"][@"name"];
-        NSLog(@"Country: %@", country);
+        NSLog(@"Donwloading done");
+        [_vc reciveData:result];
     }];
 }
+
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([[segue identifier] isEqualToString:@"GoDetail"])
+        _vc = [segue destinationViewController];
+}
+
 @end

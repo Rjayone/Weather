@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8481B6D01AD658B600A082AF /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8481B6CF1AD658B600A082AF /* DetailViewController.m */; };
 		84D4EEFC1AD3170200CA9B2F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D4EEFB1AD3170200CA9B2F /* main.m */; };
 		84D4EEFF1AD3170200CA9B2F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D4EEFE1AD3170200CA9B2F /* AppDelegate.m */; };
 		84D4EF021AD3170200CA9B2F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D4EF011AD3170200CA9B2F /* ViewController.m */; };
@@ -17,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8481B6CE1AD658B600A082AF /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		8481B6CF1AD658B600A082AF /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		84D4EEF61AD3170200CA9B2F /* Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84D4EEFA1AD3170200CA9B2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84D4EEFB1AD3170200CA9B2F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -42,6 +45,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8481B6CD1AD6589600A082AF /* DetailView */ = {
+			isa = PBXGroup;
+			children = (
+				8481B6CE1AD658B600A082AF /* DetailViewController.h */,
+				8481B6CF1AD658B600A082AF /* DetailViewController.m */,
+			);
+			name = DetailView;
+			sourceTree = "<group>";
+		};
 		84D4EEED1AD3170200CA9B2F = {
 			isa = PBXGroup;
 			children = (
@@ -61,6 +73,7 @@
 		84D4EEF81AD3170200CA9B2F /* Weather */ = {
 			isa = PBXGroup;
 			children = (
+				8481B6CD1AD6589600A082AF /* DetailView */,
 				84D4EF1F1AD3171800CA9B2F /* API */,
 				84D4EF001AD3170200CA9B2F /* ViewController.h */,
 				84D4EF011AD3170200CA9B2F /* ViewController.m */,
@@ -123,6 +136,7 @@
 				TargetAttributes = {
 					84D4EEF51AD3170200CA9B2F = {
 						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = LQD7TJGE73;
 					};
 				};
 			};
@@ -162,6 +176,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8481B6D01AD658B600A082AF /* DetailViewController.m in Sources */,
 				84D4EF021AD3170200CA9B2F /* ViewController.m in Sources */,
 				84D4EEFF1AD3170200CA9B2F /* AppDelegate.m in Sources */,
 				84D4EEFC1AD3170200CA9B2F /* main.m in Sources */,
@@ -275,9 +290,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Weather/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -285,9 +303,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Weather/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -310,6 +331,7 @@
 				84D4EF1B1AD3170200CA9B2F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

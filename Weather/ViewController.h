@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @class OWMWeatherAPI;
+@class DetailViewController;
 
 @interface ViewController : UIViewController
 
@@ -18,7 +19,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *search;
 
 @property (strong, nonatomic) OWMWeatherAPI* weatherAPI;
-
+@property (strong, nonatomic) DetailViewController* vc;
 - (IBAction)actionSeatch:(UIButton *)sender;
 @end
 

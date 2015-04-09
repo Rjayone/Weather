@@ -153,7 +153,7 @@
         callback(nil, JSONSerialization);
     }];
     
-    [_weatherQueue addOperation:blockOperation];
+    [[NSOperationQueue mainQueue] addOperation:blockOperation];
     
 }
 
