@@ -52,7 +52,7 @@ static NSString* kWeatherIconRain   = @"https://ssl.gstatic.com/onebox/weather/2
         _backgroundImage.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:kWeatherIconCloudy]]];
     }
     _city.text = result[@"city"][@"name"];
-    _temperature.text = [[[NSNumber numberWithInteger:[result[@"list"][0][@"temp"][@"day"] integerValue] - 273]stringValue] stringByAppendingString:@"˚"];
+    _temperature.text = [[[NSNumber numberWithInteger:[result[@"list"][0][@"deg"] integerValue] - 273]stringValue] stringByAppendingString:@"˚"];
 }
 
 //--------------------------------------------------------------------------
