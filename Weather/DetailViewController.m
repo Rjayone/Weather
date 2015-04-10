@@ -52,7 +52,7 @@ static NSString* kWeatherIconRain   = @"https://ssl.gstatic.com/onebox/weather/2
         _backgroundImage.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:kWeatherIconCloudy]]];
     }
     _city.text = result[@"city"][@"name"];
-    _temperature.text = [[[NSNumber numberWithInteger:[result[@"list"][0][@"deg"] integerValue] - 273]stringValue] stringByAppendingString:@"˚"];
+    _temperature.text = [[[NSNumber numberWithInteger:[result[@"list"][0][@"temp"][@"day"] integerValue] - 273]stringValue] stringByAppendingString:@"˚"];
 }
 
 //--------------------------------------------------------------------------
@@ -68,7 +68,7 @@ static NSString* kWeatherIconRain   = @"https://ssl.gstatic.com/onebox/weather/2
         DataModel* day = [[DataModel alloc] init];
         NSDictionary* list  = data[@"list"][i];
         day.clouds = [[list[@"clouds"] stringValue] stringByAppendingString:@" %"];
-        day.temperature = [[[NSNumber numberWithInteger:[list[@"deg"] integerValue] - 273]stringValue] stringByAppendingString:@"˚"];
+        day.temperature = [[[NSNumber numberWithInteger:[list[@"temp"][@"day"] integerValue] - 273]stringValue] stringByAppendingString:@"˚"];
         day.date = [NSDate dateWithTimeIntervalSince1970:[list[@"dt"] integerValue]];
         day.humidity = [[list[@"humidity"] stringValue] stringByAppendingString:@" %"];
         day.pressure = [list[@"pressure"] stringValue];

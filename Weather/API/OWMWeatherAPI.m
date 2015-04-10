@@ -153,7 +153,7 @@
         callback(nil, JSONSerialization);
     }];
     
-    [[NSOperationQueue mainQueue] addOperation:blockOperation];
+    [[NSOperationQueue currentQueue] addOperation:blockOperation];
     
 }
 
