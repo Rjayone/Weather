@@ -54,6 +54,7 @@
 		8481B6CD1AD6589600A082AF /* DetailView */ = {
 			isa = PBXGroup;
 			children = (
+				84D4EF1F1AD3171800CA9B2F /* API */,
 				84A3682B1AD802B60018904E /* Model */,
 				84A368271AD7DDDD0018904E /* Cell */,
 				8481B6CE1AD658B600A082AF /* DetailViewController.h */,
@@ -100,7 +101,6 @@
 			isa = PBXGroup;
 			children = (
 				8481B6CD1AD6589600A082AF /* DetailView */,
-				84D4EF1F1AD3171800CA9B2F /* API */,
 				84D4EF001AD3170200CA9B2F /* ViewController.h */,
 				84D4EF011AD3170200CA9B2F /* ViewController.m */,
 				84D4EF031AD3170200CA9B2F /* Main.storyboard */,

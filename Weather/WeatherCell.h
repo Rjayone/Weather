@@ -16,6 +16,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *cloud;
 @property (weak, nonatomic) IBOutlet UILabel *date;
 @property (weak, nonatomic) IBOutlet UIImageView *image;
+@property (weak, nonatomic) IBOutlet UILabel *temperature;
+
 
 
 @end

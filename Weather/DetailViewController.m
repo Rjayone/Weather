@@ -109,7 +109,7 @@ static NSString* kWeatherIconRain   = @"https://ssl.gstatic.com/onebox/weather/2
             cell.wind.text     = currentDay.wind;
             cell.humidity.text = currentDay.humidity;
             cell.cloud.text    = currentDay.clouds;
-            
+            cell.temperature.text = currentDay.temperature;
             NSDateFormatter *dateFormatter = [NSDateFormatter new];
             [dateFormatter setDateStyle:NSDateFormatterShortStyle];
             cell.date.text     = [dateFormatter stringFromDate:currentDay.date];
@@ -152,8 +152,8 @@ static NSString* kWeatherIconRain   = @"https://ssl.gstatic.com/onebox/weather/2
     
     [self animation:UIViewAnimationOptionTransitionCurlUp playForDirection:1];
     _pageControl.currentPage += 1;
-    if(_pageControl.currentPage > 5)
-        _pageControl.currentPage = 5;
+    if(_pageControl.currentPage > _pageControl.numberOfPages-1)
+        _pageControl.currentPage = _pageControl.numberOfPages-1;
 }
 
 
