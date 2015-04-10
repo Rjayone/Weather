@@ -10,6 +10,10 @@
 #import "WeatherCell.h"
 #import "DataModel.h"
 
+static NSString* kWeatherIconSunny  = @"https://ssl.gstatic.com/onebox/weather/256/sunny.png";
+static NSString* kWeatherIconCloudy = @"https://ssl.gstatic.com/onebox/weather/256/cloudy.png";
+static NSString* kWeatherIconRain   = @"https://ssl.gstatic.com/onebox/weather/256/rain.png";
+
 @implementation DetailViewController
 
 //--------------------------------------------------------------------------
@@ -35,9 +39,20 @@
     [self parseDataFromDictionary:result];
     
     _weatherStatus.text = result[@"list"][0][@"weather"][0][@"main"];
+    if([_weatherStatus.text isEqualToString:@"Clear"])
+    {
+        _backgroundImage.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:kWeatherIconSunny]]];
+    }
+    if([_weatherStatus.text isEqualToString:@"Rain"])
+    {
+       _backgroundImage.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:kWeatherIconRain]]];
+    }
+    if([_weatherStatus.text isEqualToString:@"Clouds"])
+    {
+        _backgroundImage.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:kWeatherIconCloudy]]];
+    }
     _city.text = result[@"city"][@"name"];
-    NSNumber* temp = result[@"list"][0][@"temp"][@"day"];
-    _temperature.text = [[[NSNumber numberWithInt:[temp doubleValue] - 273]stringValue] stringByAppendingString:@"˚"];
+    _temperature.text = [[[NSNumber numberWithInteger:[result[@"list"][0][@"temp"][@"day"] integerValue] - 273]stringValue] stringByAppendingString:@"˚"];
 }
 
 //--------------------------------------------------------------------------
@@ -58,6 +73,8 @@
         day.humidity = [[list[@"humidity"] stringValue] stringByAppendingString:@" %"];
         day.pressure = [list[@"pressure"] stringValue];
         day.wind     = [[list[@"speed"] stringValue] stringByAppendingString:@" km/h"];
+        day.status = list[@"weather"][0][@"main"];
+        
         [_data addObject:day];
     }
 }
@@ -92,7 +109,22 @@
             cell.wind.text     = currentDay.wind;
             cell.humidity.text = currentDay.humidity;
             cell.cloud.text    = currentDay.clouds;
-//            //cell.date.text     = [currentDay.date];
+            
+            NSDateFormatter *dateFormatter = [NSDateFormatter new];
+            [dateFormatter setDateStyle:NSDateFormatterShortStyle];
+            cell.date.text     = [dateFormatter stringFromDate:currentDay.date];
+            if([currentDay.status isEqualToString:@"Clear"])
+            {
+                cell.image.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:kWeatherIconSunny]]];
+            }
+            if([currentDay.status  isEqualToString:@"Rain"])
+            {
+                cell.image.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:kWeatherIconRain]]];
+            }
+            if([currentDay.status  isEqualToString:@"Clouds"])
+            {
+                cell.image.image= [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:kWeatherIconCloudy]]];
+            }
         }
     }
     return cell;

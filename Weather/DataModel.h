@@ -16,5 +16,6 @@
 @property (strong, nonatomic) NSString* humidity;
 @property (strong, nonatomic) NSString* clouds;
 @property (strong, nonatomic) NSDate* date;
+@property (strong, nonatomic) NSString* status;
 
 @end
