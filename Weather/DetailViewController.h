@@ -10,18 +10,15 @@
 
 @interface DetailViewController : UIViewController <UITabBarDelegate, UITableViewDataSource>
 
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UILabel *temperature;
 
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundImage;
 @property (strong, nonatomic) IBOutlet UILabel *city;
 @property (weak, nonatomic) IBOutlet UILabel *weatherStatus;
-@property (weak, nonatomic) IBOutlet UILabel *wind;
-@property (weak, nonatomic) IBOutlet UILabel *humidity;
-@property (weak, nonatomic) IBOutlet UILabel *presure;
+@property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
 
-@property (strong, nonatomic) NSDictionary* segueResult;
-
-
+@property (strong, nonatomic) NSMutableArray* data;
 
 - (void) reciveData:(NSDictionary*) result;
 @end

@@ -10,4 +10,11 @@
 
 @interface WeatherCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *pressure;
+@property (weak, nonatomic) IBOutlet UILabel *wind;
+@property (weak, nonatomic) IBOutlet UILabel *humidity;
+@property (weak, nonatomic) IBOutlet UILabel *cloud;
+@property (weak, nonatomic) IBOutlet UILabel *date;
+
+
 @end

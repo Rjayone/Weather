@@ -63,7 +63,7 @@ static NSString* kAPIKey = @"47e5228bf1f19cca540208c888986822";
 {
     NSLog(@"Begin download");
     CLLocationCoordinate2D coord = CLLocationCoordinate2DMake(_latitude.text.floatValue, _longitude.text.floatValue);
-    [_weatherAPI dailyForecastWeatherByCoordinate:coord withCount:1 andCallback:^(NSError *error, NSDictionary *result) {
+    [_weatherAPI dailyForecastWeatherByCoordinate:coord withCount:5 andCallback:^(NSError *error, NSDictionary *result) {
         if(error)
         {
             NSLog(@"Something wrong!");
