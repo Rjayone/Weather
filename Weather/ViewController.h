@@ -21,5 +21,6 @@
 @property (strong, nonatomic) OWMWeatherAPI* weatherAPI;
 @property (strong, nonatomic) DetailViewController* vc;
 - (IBAction)actionSeatch:(UIButton *)sender;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *spinner;
 @end
 

@@ -34,10 +34,9 @@ static NSString* kAPIKey = @"47e5228bf1f19cca540208c888986822";
     [_weatherAPI setTemperatureFormat:kOWMTempKelvin];
 }
 
-//-----------------------------------------------------------------------------
 
 #pragma mark Animations
-
+//--------------------------------------------------------------------------
 - (void) moveView:(UIView*) view toPoint:(CGPoint) to withDuration:(CGFloat) duration andDelay:(CGFloat) delay
 {
     [UIView beginAnimations:nil context:nil];
@@ -49,6 +48,7 @@ static NSString* kAPIKey = @"47e5228bf1f19cca540208c888986822";
 }
 
 
+//--------------------------------------------------------------------------
 - (void) fadeView:(UIView*) view toValue:(CGFloat) value withDuration:(CGFloat) duration andDelay:(CGFloat) delay
 {
     [UIView beginAnimations:nil context:nil];
@@ -59,8 +59,11 @@ static NSString* kAPIKey = @"47e5228bf1f19cca540208c888986822";
     [UIView commitAnimations];
 }
 
+
+//--------------------------------------------------------------------------
 - (IBAction)actionSeatch:(UIButton *)sender
 {
+    [_spinner performSelectorInBackground:@selector(startAnimating) withObject:NULL];
     NSLog(@"Begin download");
     CLLocationCoordinate2D coord = CLLocationCoordinate2DMake(_latitude.text.floatValue, _longitude.text.floatValue);
     [_weatherAPI dailyForecastWeatherByCoordinate:coord withCount:15 andCallback:^(NSError *error, NSDictionary *result) {
@@ -74,6 +77,8 @@ static NSString* kAPIKey = @"47e5228bf1f19cca540208c888986822";
     }];
 }
 
+
+//--------------------------------------------------------------------------
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if([[segue identifier] isEqualToString:@"GoDetail"])

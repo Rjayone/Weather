@@ -18,4 +18,6 @@
 @property (strong, nonatomic) NSDate* date;
 @property (strong, nonatomic) NSString* status;
 
++ (instancetype) initDataModelWithDictionary:(NSDictionary*) data;
+
 @end

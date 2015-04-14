@@ -144,8 +144,15 @@
         langString = @"";
     }
     
-    NSString *urlString = [NSString stringWithFormat:@"%@%@%@&APPID=%@%@", _baseURL, _apiVersion, method, _apiKey, langString];
-    NSURL *url = [NSURL URLWithString:urlString];
+    //Условная проверка на подключение к интернету
+    NSString* urlString = [NSString stringWithContentsOfURL:[[NSURL alloc]initWithString:@"http://www.apple.com"]];
+    if(urlString == NULL){
+        NSLog(@"Connection error");
+        return;
+    }
+    
+    urlString = [NSString stringWithFormat:@"%@%@%@&APPID=%@%@", _baseURL, _apiVersion, method, _apiKey, langString];
+    NSURL* url = [NSURL URLWithString:urlString];
     NSBlockOperation* blockOperation = [NSBlockOperation blockOperationWithBlock:^(void){
         NSData* json = [NSData dataWithContentsOfURL:url];
         NSError* localerror = nil;

@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@class DataModel;
+
+static NSString* kWeatherIconSunny  = @"https://ssl.gstatic.com/onebox/weather/256/sunny.png";
+static NSString* kWeatherIconCloudy =  @"https://ssl.gstatic.com/onebox/weather/256/cloudy.png";
+static NSString* kWeatherIconRain   = @"https://ssl.gstatic.com/onebox/weather/256/rain.png";
+
 @interface WeatherCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *pressure;
@@ -18,6 +24,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *image;
 @property (weak, nonatomic) IBOutlet UILabel *temperature;
 
-
++ (instancetype) initWithDataModel:(DataModel*) data;
 
 @end

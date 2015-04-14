@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		844091191AD7095B00CE9836 /* WeatherCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 844091181AD7095B00CE9836 /* WeatherCell.m */; };
+		844C53801ADD384200DE565F /* CoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 844C537E1ADD384200DE565F /* CoreDataModel.xcdatamodeld */; };
 		8481B6D01AD658B600A082AF /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8481B6CF1AD658B600A082AF /* DetailViewController.m */; };
 		84A3682A1AD7DE810018904E /* DataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A368291AD7DE810018904E /* DataModel.m */; };
 		84D4EEFC1AD3170200CA9B2F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D4EEFB1AD3170200CA9B2F /* main.m */; };
@@ -22,6 +23,7 @@
 /* Begin PBXFileReference section */
 		844091171AD7095B00CE9836 /* WeatherCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherCell.h; sourceTree = "<group>"; };
 		844091181AD7095B00CE9836 /* WeatherCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherCell.m; sourceTree = "<group>"; };
+		844C537F1ADD384200DE565F /* CoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataModel.xcdatamodel; sourceTree = "<group>"; };
 		8481B6CE1AD658B600A082AF /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		8481B6CF1AD658B600A082AF /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		84A368281AD7DE810018904E /* DataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataModel.h; sourceTree = "<group>"; };
@@ -51,6 +53,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		844C53811ADD384A00DE565F /* DataBase */ = {
+			isa = PBXGroup;
+			children = (
+				844C537E1ADD384200DE565F /* CoreDataModel.xcdatamodeld */,
+			);
+			name = DataBase;
+			sourceTree = "<group>";
+		};
 		8481B6CD1AD6589600A082AF /* DetailView */ = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +94,7 @@
 		84D4EEED1AD3170200CA9B2F = {
 			isa = PBXGroup;
 			children = (
+				844C53811ADD384A00DE565F /* DataBase */,
 				84D4EEF81AD3170200CA9B2F /* Weather */,
 				84D4EEF71AD3170200CA9B2F /* Products */,
 			);
@@ -208,6 +219,7 @@
 				84D4EEFC1AD3170200CA9B2F /* main.m in Sources */,
 				84A3682A1AD7DE810018904E /* DataModel.m in Sources */,
 				844091191AD7095B00CE9836 /* WeatherCell.m in Sources */,
+				844C53801ADD384200DE565F /* CoreDataModel.xcdatamodeld in Sources */,
 				84D4EF221AD3173400CA9B2F /* OWMWeatherAPI.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -362,6 +374,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		844C537E1ADD384200DE565F /* CoreDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				844C537F1ADD384200DE565F /* CoreDataModel.xcdatamodel */,
+			);
+			currentVersion = 844C537F1ADD384200DE565F /* CoreDataModel.xcdatamodel */;
+			path = CoreDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 84D4EEEE1AD3170200CA9B2F /* Project object */;
 }
